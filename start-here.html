@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start Here | Thejus Joseph</title>
+  <meta name="description" content="A simple starting path for mutual fund investors: understand your money, protect the basics, define goals and invest with clarity. Thejus Joseph, AMFI-registered Mutual Fund Distributor — ARN 363352.">
+  <meta name="robots" content="index,follow">
+  <meta property="og:title" content="Start Here | Thejus Joseph">
+  <meta property="og:description" content="Build the right financial foundation before choosing investment products.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="TJ_Profile_pic.jpeg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --violet:#6D4AFF;
+      --violet-dark:#5936E0;
+      --ink:#16161F;
+      --muted:#64687A;
+      --muted-2:#8A8DA0;
+      --line:#E7E6F0;
+      --bg-hero:linear-gradient(135deg,#FBFAFF 0%,#F4F1FF 55%,#EDE8FF 100%);
+      --navy:#13112B;
+      --card-violet:#F1ECFF;
+      --card-green:#E7F7EE;
+      --card-peach:#FDECE3;
+      --card-cream:#FDF3D9;
+      --card-blue:#E9F1FE;
+      --icon-violet:#7C5CFC;
+      --icon-green:#34A369;
+      --icon-peach:#E8734A;
+      --icon-cream:#D9A441;
+      --icon-blue:#3E7BFA;
+      --radius-lg:20px;
+      --radius-md:14px;
+      --radius-sm:10px;
+      --shadow:0 2px 6px rgba(20,15,60,.05),0 10px 30px rgba(20,15,60,.06);
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:var(--ink);background:#fff;-webkit-font-smoothing:antialiased;line-height:1.5}
+    h1,h2,h3,h4,.brand{font-family:'Plus Jakarta Sans',sans-serif}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+    button,input{font:inherit}
+    .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+
+    .skip-link{position:absolute;left:-999px;top:8px;z-index:999;background:var(--navy);color:#fff;padding:10px 14px;border-radius:8px}
+    .skip-link:focus{left:12px}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:600;font-size:.95rem;padding:13px 22px;border-radius:10px;border:none;cursor:pointer;transition:transform .15s ease,box-shadow .15s ease,background .15s ease;white-space:nowrap}
+    .btn:hover{transform:translateY(-1px)}
+    .btn-primary{background:var(--violet);color:#fff;box-shadow:0 8px 20px rgba(109,74,255,.28)}
+    .btn-primary:hover{background:var(--violet-dark)}
+    .btn-dark{background:var(--navy);color:#fff}
+    .btn-outline{background:#fff;color:var(--ink);border:1.5px solid var(--line)}
+    .btn-outline:hover{border-color:var(--violet);color:var(--violet)}
+    .btn-ghost{background:transparent;color:var(--ink);font-weight:600}
+    .btn-ghost:hover{color:var(--violet)}
+    .eyebrow-underline{text-decoration:underline;text-decoration-color:rgba(109,74,255,.4);text-decoration-thickness:3px;text-underline-offset:6px}
+
+    /* Header: intentionally matches index.html */
+    header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+    nav{display:flex;align-items:center;justify-content:space-between;padding:18px 32px;max-width:1180px;margin:0 auto;position:relative}
+    .logo-block .brand{font-size:1.15rem;font-weight:800;letter-spacing:.3px;display:flex;align-items:center;gap:8px}
+    .logo-block .brand::after{content:'';width:7px;height:7px;border-radius:50%;background:#3EBE7E;display:inline-block}
+    .logo-block .tagline{font-size:.72rem;color:var(--muted-2);margin-top:2px}
+    .nav-links{display:flex;align-items:center;gap:34px;font-size:.93rem;font-weight:500;color:var(--ink)}
+    .nav-links a{display:flex;align-items:center;gap:4px;opacity:.85;position:relative}
+    .nav-links a:hover{opacity:1;color:var(--violet)}
+    .nav-links a.active{opacity:1;color:var(--violet);font-weight:700}
+    .nav-links a.active::after{content:'';height:2px;background:var(--violet);border-radius:2px;position:absolute;left:0;right:0;bottom:-9px}
+    .nav-right{display:flex;align-items:center;gap:26px}
+    .menu-toggle{display:none;background:none;border:none;font-size:1.5rem;cursor:pointer}
+
+    .arn-strip{background:#FAF9FF;border-bottom:1px solid var(--line);text-align:center;padding:8px 16px;font-size:.74rem;color:var(--muted)}
+    .arn-strip strong{color:var(--ink)}
+
+    /* Hero */
+    .hero{background:var(--bg-hero);padding:72px 0 64px;overflow:hidden;position:relative}
+    .hero::after{content:'';position:absolute;width:360px;height:360px;border-radius:50%;right:-145px;bottom:-170px;border:75px solid rgba(255,255,255,.35)}
+    .hero-grid{display:grid;grid-template-columns:1.03fr .97fr;gap:54px;align-items:center;position:relative;z-index:1}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.8);border:1px solid rgba(109,74,255,.18);border-radius:999px;padding:8px 12px;color:var(--violet);font-size:.74rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+    .eyebrow-dot{width:7px;height:7px;background:var(--violet);border-radius:50%;box-shadow:0 0 0 5px rgba(109,74,255,.10)}
+    .hero h1{font-size:clamp(2.45rem,4.8vw,4.25rem);line-height:1.08;font-weight:800;letter-spacing:-1.6px;margin-top:20px}
+    .hero h1 .accent{color:var(--violet)}
+    .hero p.sub{margin-top:20px;font-size:1.05rem;color:var(--muted);max-width:590px;line-height:1.72}
+    .hero-ctas{display:flex;align-items:center;gap:14px;margin-top:30px;flex-wrap:wrap}
+    .hero-trust{display:flex;align-items:flex-start;gap:10px;margin-top:22px;font-size:.79rem;color:var(--muted)}
+    .hero-trust .check{width:20px;height:20px;border-radius:50%;background:var(--card-green);color:var(--icon-green);display:grid;place-items:center;flex:0 0 auto;font-weight:800}
+
+    .roadmap-card{background:rgba(255,255,255,.94);border:1px solid rgba(255,255,255,.98);border-radius:28px;padding:28px;box-shadow:0 18px 50px rgba(20,15,60,.12)}
+    .roadmap-head{display:flex;align-items:center;justify-content:space-between;gap:14px;padding-bottom:18px;border-bottom:1px solid var(--line)}
+    .roadmap-head h2{font-size:1.12rem}
+    .roadmap-chip{background:var(--card-green);color:#26724E;padding:7px 10px;border-radius:999px;font-size:.7rem;font-weight:800}
+    .mini-roadmap{list-style:none;margin-top:20px;display:grid;gap:16px}
+    .mini-roadmap li{display:grid;grid-template-columns:38px 1fr;gap:13px;position:relative}
+    .mini-roadmap li:not(:last-child)::after{content:'';position:absolute;left:18px;top:38px;height:23px;width:1px;background:#DDD8F1}
+    .mini-num{width:37px;height:37px;border-radius:11px;background:var(--card-violet);color:var(--violet);display:grid;place-items:center;font-size:.79rem;font-weight:800}
+    .mini-roadmap h3{font-size:.89rem;margin-bottom:2px}
+    .mini-roadmap p{font-size:.76rem;color:var(--muted-2);line-height:1.42}
+    .roadmap-note{margin-top:21px;background:var(--navy);color:#D5D3DF;border-radius:14px;padding:15px 16px;font-size:.8rem}
+    .roadmap-note strong{color:#C8B8FF}
+
+    /* General sections */
+    .section{padding:78px 0}
+    .section-soft{background:#FBFAFD}
+    .section-head{max-width:730px;margin-bottom:34px}
+    .kicker{color:var(--violet);text-transform:uppercase;letter-spacing:.1em;font-size:.72rem;font-weight:800}
+    .section-head h2{font-size:clamp(1.7rem,3vw,2.45rem);line-height:1.18;margin-top:10px;letter-spacing:-.6px}
+    .section-head p{font-size:.96rem;color:var(--muted);margin-top:13px}
+
+    /* Five-step order */
+    .order-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+    .order-card{position:relative;min-height:240px;padding:23px 20px;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;transition:box-shadow .2s ease,transform .2s ease}
+    .order-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+    .order-card .step{font-size:.69rem;font-weight:800;color:var(--muted-2);letter-spacing:.06em}
+    .order-icon{margin-top:19px;width:46px;height:46px;border-radius:13px;display:grid;place-items:center;font-size:1.25rem}
+    .order-card:nth-child(1) .order-icon{background:var(--card-blue)}
+    .order-card:nth-child(2) .order-icon{background:var(--card-cream)}
+    .order-card:nth-child(3) .order-icon{background:var(--card-green)}
+    .order-card:nth-child(4) .order-icon{background:var(--card-peach)}
+    .order-card:nth-child(5) .order-icon{background:var(--card-violet)}
+    .order-card h3{font-size:.96rem;margin-top:17px;line-height:1.35}
+    .order-card p{font-size:.78rem;color:var(--muted);margin-top:8px;line-height:1.52}
+    .order-arrow{position:absolute;right:-13px;top:46%;z-index:2;width:26px;height:26px;border-radius:50%;background:#fff;border:1px solid var(--line);display:grid;place-items:center;color:var(--violet);font-size:.8rem}
+    .order-card:last-child .order-arrow{display:none}
+
+    /* Situation chooser */
+    .chooser{display:grid;grid-template-columns:.86fr 1.14fr;gap:28px;align-items:stretch}
+    .choice-list{display:grid;gap:12px}
+    .choice-btn{width:100%;text-align:left;border:1px solid var(--line);border-radius:var(--radius-md);background:#fff;padding:17px;display:grid;grid-template-columns:42px 1fr auto;gap:13px;align-items:center;cursor:pointer;color:var(--ink);transition:border-color .16s ease,transform .16s ease,box-shadow .16s ease}
+    .choice-btn:hover,.choice-btn.active{border-color:rgba(109,74,255,.55);box-shadow:var(--shadow);transform:translateY(-1px)}
+    .choice-btn.active{background:#F9F7FF}
+    .choice-ic{width:42px;height:42px;border-radius:12px;background:var(--card-violet);display:grid;place-items:center;font-size:1.08rem}
+    .choice-btn strong{display:block;font-size:.88rem}
+    .choice-btn small{display:block;color:var(--muted-2);font-size:.72rem;margin-top:3px}
+    .choice-arrow{color:var(--violet);font-weight:800}
+    .recommendation{border-radius:28px;background:var(--navy);color:#fff;padding:35px;position:relative;overflow:hidden;min-height:100%}
+    .recommendation::before{content:'';position:absolute;width:245px;height:245px;border-radius:50%;right:-90px;top:-95px;background:rgba(109,74,255,.2)}
+    .rec-label{position:relative;color:#BDAAFF;text-transform:uppercase;letter-spacing:.1em;font-size:.7rem;font-weight:800}
+    .recommendation h3{position:relative;font-size:1.72rem;line-height:1.22;margin-top:13px;max-width:500px}
+    .recommendation>p{position:relative;color:#C8C6D4;font-size:.9rem;margin-top:12px;max-width:530px}
+    .rec-steps{position:relative;list-style:none;display:grid;gap:13px;margin-top:24px}
+    .rec-steps li{display:flex;align-items:flex-start;gap:10px;font-size:.83rem;color:#F6F5FA}
+    .rec-check{width:22px;height:22px;border-radius:50%;background:rgba(109,74,255,.35);color:#DBD2FF;display:grid;place-items:center;flex:0 0 auto;font-size:.7rem}
+    .rec-cta{position:relative;margin-top:26px}
+    .rec-cta .btn{background:#fff;color:var(--navy)}
+
+    /* Beginner guides */
+    .guide-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .guide-card{border:1px solid var(--line);border-radius:var(--radius-lg);padding:24px;background:#fff;min-height:215px;display:flex;flex-direction:column;transition:box-shadow .2s ease,transform .2s ease}
+    .guide-card:hover{box-shadow:var(--shadow);transform:translateY(-3px)}
+    .guide-top{display:flex;justify-content:space-between;align-items:center;gap:12px}
+    .guide-num{font-family:'Plus Jakarta Sans',sans-serif;font-size:1.55rem;color:#D7D0F6;font-weight:800}
+    .status{background:#F3F1F7;color:var(--muted);border-radius:999px;padding:6px 9px;font-size:.65rem;font-weight:800}
+    .guide-card h3{font-size:1rem;line-height:1.35;margin-top:22px}
+    .guide-card p{font-size:.79rem;color:var(--muted);margin-top:8px}
+    .guide-bottom{margin-top:auto;padding-top:20px;color:var(--violet);font-size:.76rem;font-weight:800}
+
+    /* Trust */
+    .trust-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+    .trust-panel{border-radius:var(--radius-lg);padding:30px;border:1px solid var(--line)}
+    .trust-panel.good{background:var(--card-green);border-color:#D5ECDD}
+    .trust-panel.caution{background:#FFF9EA;border-color:#F1E4BE}
+    .trust-panel h3{font-size:1.12rem}
+    .trust-panel ul{list-style:none;display:grid;gap:12px;margin-top:20px}
+    .trust-panel li{display:flex;gap:10px;font-size:.85rem;color:#404451}
+    .trust-panel.good .marker{color:#267A53}
+    .trust-panel.caution .marker{color:#A16F1F}
+    .marker{font-weight:900}
+
+    /* About */
+    .about-card{display:grid;grid-template-columns:.72fr 1.28fr;border:1px solid var(--line);border-radius:28px;overflow:hidden;background:#fff;box-shadow:var(--shadow)}
+    .about-photo{min-height:540px;background:#EEEAF7;overflow:hidden}
+    .about-photo img{width:100%;height:100%;object-fit:cover;object-position:center 22%}
+    .about-copy{padding:52px;align-self:center}
+    .about-copy h2{font-size:clamp(1.6rem,3vw,2.3rem);line-height:1.23;margin-top:12px;letter-spacing:-.6px}
+    .about-copy h2 span{color:var(--violet)}
+    .about-copy p{font-size:.92rem;color:var(--muted);margin-top:17px}
+    .cred-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+    .cred-chip{background:#F8F5FF;color:#4D399E;border-radius:999px;padding:9px 11px;font-size:.71rem;font-weight:800}
+    .about-sign{margin-top:25px;font-size:.86rem;font-weight:800}
+    .about-sign small{display:block;color:var(--muted-2);font-weight:500;margin-top:3px}
+
+    /* CTA */
+    .cta-wrap{padding-top:8px}
+    .cta-banner{background:var(--navy);border-radius:28px;padding:44px 48px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;color:#fff;position:relative;overflow:hidden}
+    .cta-banner::after{content:'';position:absolute;width:260px;height:260px;border-radius:50%;background:rgba(109,74,255,.2);right:-95px;bottom:-130px}
+    .cta-copy,.cta-action{position:relative;z-index:1}
+    .cta-banner h2{font-size:1.7rem;font-weight:800}
+    .cta-banner h2 .accent{color:#B79CFF}
+    .cta-banner p{font-size:.9rem;color:#B9B8CC;margin-top:8px;max-width:560px}
+    .cta-action .btn{background:#fff;color:var(--navy)}
+
+    /* Disclosure + footer */
+    .disclosure{background:#F8F7FB;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+    .disclosure-inner{display:grid;grid-template-columns:auto 1fr;gap:15px;align-items:start}
+    .shield{width:40px;height:40px;border-radius:12px;background:var(--card-violet);color:var(--violet);display:grid;place-items:center;font-weight:800}
+    .disclosure h2{font-size:.86rem}
+    .disclosure p{font-size:.74rem;color:var(--muted);line-height:1.6;margin-top:5px}
+
+    footer{border-top:1px solid var(--line);padding:30px 0}
+    .newsletter-row{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}
+    .newsletter-left{display:flex;align-items:center;gap:16px}
+    .mail-badge{width:44px;height:44px;border-radius:50%;background:var(--violet);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0}
+    .newsletter-left p{font-size:.85rem;color:var(--muted);max-width:410px}
+    .newsletter-form{display:flex;gap:10px;align-items:center}
+    .newsletter-form input{padding:12px 16px;border-radius:10px;border:1px solid var(--line);font-size:.88rem;width:230px;font-family:inherit}
+    .newsletter-form input:focus{outline:2px solid var(--violet);outline-offset:1px}
+    .no-spam{font-size:.76rem;color:var(--muted-2)}
+    .footer-bottom{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;color:var(--muted-2);font-size:.72rem}
+    .footer-links{display:flex;gap:18px;flex-wrap:wrap}
+    .footer-links a:hover{color:var(--violet)}
+
+    [data-reveal]{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+    [data-reveal].in{opacity:1;transform:none}
+
+    @media(max-width:980px){
+      .hero-grid{grid-template-columns:1fr}
+      .roadmap-card{max-width:690px}
+      .order-grid{grid-template-columns:repeat(2,1fr)}
+      .order-arrow{display:none}
+      .order-card:last-child{grid-column:1/-1;min-height:auto}
+      .chooser{grid-template-columns:1fr}
+      .guide-grid{grid-template-columns:repeat(2,1fr)}
+      .about-card{grid-template-columns:.85fr 1.15fr}
+      .about-copy{padding:38px}
+      .nav-links{display:none}
+      .menu-toggle{display:block}
+      .nav-links.open{display:flex;position:absolute;top:72px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:20px 32px;flex-direction:column;align-items:flex-start;gap:18px;box-shadow:var(--shadow)}
+      .nav-links a.active::after{display:none}
+    }
+
+    @media(max-width:720px){
+      .wrap{padding:0 20px}
+      nav{padding:15px 20px}
+      .nav-right .btn{display:none}
+      .arn-strip{font-size:.67rem}
+      .hero{padding:56px 0 52px}
+      .hero h1{letter-spacing:-1px}
+      .hero p.sub{font-size:.97rem}
+      .section{padding:64px 0}
+      .order-grid,.guide-grid,.trust-grid{grid-template-columns:1fr}
+      .order-card:last-child{grid-column:auto}
+      .choice-btn{grid-template-columns:40px 1fr}
+      .choice-arrow{display:none}
+      .recommendation{padding:28px}
+      .about-card{grid-template-columns:1fr}
+      .about-photo{min-height:410px;max-height:500px}
+      .about-copy{padding:31px 25px}
+      .cta-banner{padding:34px 27px;align-items:flex-start;flex-direction:column}
+      .cta-action{width:100%}
+      .cta-action .btn{width:100%}
+      .disclosure-inner{grid-template-columns:1fr}
+      .newsletter-row{flex-direction:column;align-items:flex-start}
+      .newsletter-form{width:100%}
+      .newsletter-form input{flex:1;width:auto;min-width:0}
+    }
+
+    @media(prefers-reduced-motion:reduce){
+      html{scroll-behavior:auto}
+      [data-reveal]{opacity:1;transform:none;transition:none}
+      .btn:hover,.order-card:hover,.choice-btn:hover,.guide-card:hover{transform:none}
+    }
+
+    a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--violet);outline-offset:2px}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header>
+    <nav aria-label="Primary navigation">
+      <a class="logo-block" href="index.html" aria-label="Thejus Joseph home">
+        <div class="brand">THEJUS JOSEPH</div>
+        <div class="tagline">Financial clarity. Better decisions.</div>
+      </a>
+
+      <div class="nav-links" id="navLinks">
+        <a class="active" href="start-here.html" aria-current="page">Start Here</a>
+        <a href="index.html#learn">Learn</a>
+        <a href="index.html#guides">Guides</a>
+        <a href="index.html#questions">Questions</a>
+        <a href="index.html#about">About</a>
+      </div>
+
+      <div class="nav-right">
+        <a class="btn btn-dark" href="book.html" style="padding:10px 18px;font-size:.85rem">📅 Book a 30-Min Call</a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open menu" aria-controls="navLinks" aria-expanded="false">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <div class="arn-strip"><strong>AMFI-registered Mutual Fund Distributor</strong> &nbsp;•&nbsp; ARN 363352</div>
+
+  <main id="main">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div data-reveal>
+          <div class="eyebrow"><span class="eyebrow-dot"></span>Start here • A practical first step</div>
+          <h1>New to investing?<br><span class="accent eyebrow-underline">Start with clarity.</span></h1>
+          <p class="sub">A mutual fund is only a product. The real starting point is understanding your money, protecting the basics and connecting every investment to a purpose.</p>
+
+          <div class="hero-ctas">
+            <a class="btn btn-primary" href="#find-your-path">Find My Starting Point →</a>
+            <a class="btn btn-outline" href="book.html">Book a Clarity Conversation</a>
+          </div>
+
+          <div class="hero-trust">
+            <span class="check">✓</span>
+            <span>No return promises. No market predictions. No pressure to invest immediately.</span>
+          </div>
+        </div>
+
+        <aside class="roadmap-card" data-reveal aria-label="A simple first-month money roadmap">
+          <div class="roadmap-head">
+            <h2>Your first 30 days</h2>
+            <span class="roadmap-chip">Simple, not rushed</span>
+          </div>
+          <ol class="mini-roadmap">
+            <li><span class="mini-num">01</span><div><h3>Know your numbers</h3><p>Income, essential expenses, debt and available surplus.</p></div></li>
+            <li><span class="mini-num">02</span><div><h3>Protect the foundation</h3><p>Emergency buffer and suitable protection before chasing returns.</p></div></li>
+            <li><span class="mini-num">03</span><div><h3>Name the goal</h3><p>Decide what the money is for and when you may need it.</p></div></li>
+            <li><span class="mini-num">04</span><div><h3>Invest consistently</h3><p>Choose a manageable amount and build the habit over time.</p></div></li>
+          </ol>
+          <div class="roadmap-note"><strong>Remember:</strong> the best first investment decision may sometimes be to wait and strengthen your foundation.</div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="money-order-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div class="kicker">The correct sequence</div>
+          <h2 id="money-order-title">Money generally works better in this order.</h2>
+          <p>People often jump directly to fund selection. A stronger process starts one level earlier.</p>
+        </div>
+
+        <div class="order-grid">
+          <article class="order-card" data-reveal>
+            <span class="step">STEP 01</span><div class="order-icon">🧾</div>
+            <h3>Understand your cash flow</h3><p>Know what comes in, what must go out and what you can invest without financial stress.</p><span class="order-arrow">→</span>
+          </article>
+          <article class="order-card" data-reveal>
+            <span class="step">STEP 02</span><div class="order-icon">🧯</div>
+            <h3>Build an emergency buffer</h3><p>Create accessible reserves so unexpected expenses do not force you to sell investments.</p><span class="order-arrow">→</span>
+          </article>
+          <article class="order-card" data-reveal>
+            <span class="step">STEP 03</span><div class="order-icon">🛡️</div>
+            <h3>Protect major risks</h3><p>Understand health and life protection needs before depending on investments for security.</p><span class="order-arrow">→</span>
+          </article>
+          <article class="order-card" data-reveal>
+            <span class="step">STEP 04</span><div class="order-icon">🎯</div>
+            <h3>Define goals and timelines</h3><p>Different goals require different time horizons, risk levels and investment approaches.</p><span class="order-arrow">→</span>
+          </article>
+          <article class="order-card" data-reveal>
+            <span class="step">STEP 05</span><div class="order-icon">🌱</div>
+            <h3>Invest with consistency</h3><p>Choose suitable investments, automate the habit and review without reacting to every headline.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" id="find-your-path" aria-labelledby="path-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div class="kicker">Choose your situation</div>
+          <h2 id="path-title">Where are you today?</h2>
+          <p>Select the option closest to your current situation. The recommendation will update instantly.</p>
+        </div>
+
+        <div class="chooser">
+          <div class="choice-list" data-reveal>
+            <button class="choice-btn active" type="button" data-path="new" aria-pressed="true">
+              <span class="choice-ic">🌱</span><span><strong>I have never invested</strong><small>I need to understand the basics before starting.</small></span><span class="choice-arrow">→</span>
+            </button>
+            <button class="choice-btn" type="button" data-path="sip" aria-pressed="false">
+              <span class="choice-ic">🔁</span><span><strong>I have SIPs but feel unsure</strong><small>I started, but I do not know whether the approach makes sense.</small></span><span class="choice-arrow">→</span>
+            </button>
+            <button class="choice-btn" type="button" data-path="goals" aria-pressed="false">
+              <span class="choice-ic">🧭</span><span><strong>I invest without clear goals</strong><small>I own funds, but the money is not connected to a plan.</small></span><span class="choice-arrow">→</span>
+            </button>
+            <button class="choice-btn" type="button" data-path="review" aria-pressed="false">
+              <span class="choice-ic">💬</span><span><strong>I want a human review</strong><small>I want to talk through my situation before taking action.</small></span><span class="choice-arrow">→</span>
+            </button>
+          </div>
+
+          <div class="recommendation" data-reveal aria-live="polite">
+            <div class="rec-label">Recommended starting path</div>
+            <h3 id="recTitle">Build your financial foundation first.</h3>
+            <p id="recText">Do not begin with fund rankings. Start by understanding your monthly surplus, emergency requirements and the purpose of your first investment.</p>
+            <ul class="rec-steps" id="recSteps">
+              <li><span class="rec-check">✓</span><span>Calculate a realistic monthly investible surplus.</span></li>
+              <li><span class="rec-check">✓</span><span>Create or strengthen your emergency fund.</span></li>
+              <li><span class="rec-check">✓</span><span>Choose one simple goal for your first SIP.</span></li>
+            </ul>
+            <div class="rec-cta"><a class="btn" id="recLink" href="#beginner-guides">See the Beginner Guides →</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="beginner-guides" aria-labelledby="guides-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div class="kicker">Essential reading</div>
+          <h2 id="guides-title">Five beginner guides, in the order I recommend.</h2>
+          <p>As the website grows, each card will connect to its own article. For now, this gives visitors a clear learning sequence.</p>
+        </div>
+
+        <div class="guide-grid">
+          <article class="guide-card" data-reveal><div class="guide-top"><span class="guide-num">01</span><span class="status">FOUNDATION</span></div><h3>Money basics before you invest</h3><p>Cash flow, debt, emergency reserves and how to decide whether you are ready to begin.</p><div class="guide-bottom">First guide in the learning path</div></article>
+          <article class="guide-card" data-reveal><div class="guide-top"><span class="guide-num">02</span><span class="status">MUTUAL FUNDS</span></div><h3>How mutual funds actually work</h3><p>NAV, units, fund categories, market risk, costs and what a distributor does.</p><div class="guide-bottom">Understand before selecting</div></article>
+          <article class="guide-card" data-reveal><div class="guide-top"><span class="guide-num">03</span><span class="status">ACTION</span></div><h3>Your first SIP, step by step</h3><p>How to decide the amount, link it to a goal and create a habit you can maintain.</p><div class="guide-bottom">A practical setup guide</div></article>
+          <article class="guide-card" data-reveal><div class="guide-top"><span class="guide-num">04</span><span class="status">SAFETY</span></div><h3>How much emergency fund is enough?</h3><p>A simple framework based on essential expenses, job stability and family responsibilities.</p><div class="guide-bottom">Build resilience first</div></article>
+          <article class="guide-card" data-reveal><div class="guide-top"><span class="guide-num">05</span><span class="status">BEHAVIOUR</span></div><h3>Common mistakes new investors make</h3><p>Chasing recent returns, collecting too many funds and reacting emotionally to volatility.</p><div class="guide-bottom">Avoid preventable errors</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft" aria-labelledby="trust-title">
+      <div class="wrap">
+        <div class="section-head" data-reveal>
+          <div class="kicker">Clear expectations</div>
+          <h2 id="trust-title">What you can—and cannot—expect from me.</h2>
+          <p>Trust begins by being explicit about the nature and limits of the service.</p>
+        </div>
+
+        <div class="trust-grid">
+          <article class="trust-panel good" data-reveal>
+            <h3>What I can help you understand</h3>
+            <ul>
+              <li><span class="marker">✓</span><span>How mutual funds work and how different categories are used.</span></li>
+              <li><span class="marker">✓</span><span>How to connect investments with goals and time horizons.</span></li>
+              <li><span class="marker">✓</span><span>How SIP discipline and market volatility interact over time.</span></li>
+              <li><span class="marker">✓</span><span>How to simplify an unnecessarily complicated mutual fund portfolio.</span></li>
+              <li><span class="marker">✓</span><span>How mutual fund distribution and commissions work.</span></li>
+            </ul>
+          </article>
+
+          <article class="trust-panel caution" data-reveal>
+            <h3>What I will not promise</h3>
+            <ul>
+              <li><span class="marker">—</span><span>Guaranteed returns or a risk-free mutual fund.</span></li>
+              <li><span class="marker">—</span><span>Precise predictions about markets, sectors or future performance.</span></li>
+              <li><span class="marker">—</span><span>Daily trading calls, stock tips or speculative shortcuts.</span></li>
+              <li><span class="marker">—</span><span>That a recent top-performing fund will remain the best option.</span></li>
+              <li><span class="marker">—</span><span>That investing is suitable before your basic finances are stable.</span></li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="about-title">
+      <div class="wrap">
+        <article class="about-card" data-reveal>
+          <div class="about-photo">
+            <img src="TJ_Profile_pic.jpeg" alt="Thejus Joseph" width="900" height="1200" loading="lazy">
+          </div>
+          <div class="about-copy">
+            <div class="kicker">Why this approach</div>
+            <h2 id="about-title">I have spent nearly 15 years around founders and <span>high-risk decisions.</span> Personal finance should begin with fewer avoidable risks.</h2>
+            <p>My work across startup ecosystems taught me that a good decision is not merely about choosing an exciting opportunity. It is about understanding downside, sequencing decisions correctly and staying disciplined after the initial enthusiasm disappears.</p>
+            <p>I bring that same decision-making lens to mutual fund distribution: explain the basics clearly, connect products to real goals and avoid unnecessary complexity.</p>
+            <div class="cred-row">
+              <span class="cred-chip">AMFI-registered MFD</span>
+              <span class="cred-chip">ARN 363352</span>
+              <span class="cred-chip">Plain-language conversations</span>
+            </div>
+            <div class="about-sign">Thejus Joseph<small>Mutual Fund Distributor</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section cta-wrap" aria-labelledby="cta-title">
+      <div class="wrap">
+        <div class="cta-banner" data-reveal>
+          <div class="cta-copy">
+            <h2 id="cta-title">Still unsure where to begin? <span class="accent">Start with a conversation.</span></h2>
+            <p>We can first understand your current situation, goals and questions. There is no need to select a product during the first conversation.</p>
+          </div>
+          <div class="cta-action"><a class="btn" href="book.html">📅 Book a 30-Minute Clarity Call</a></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <aside class="disclosure" aria-labelledby="disclosure-title">
+    <div class="wrap disclosure-inner">
+      <div class="shield" aria-hidden="true">i</div>
+      <div>
+        <h2 id="disclosure-title">Important disclosure</h2>
+        <p>Thejus Joseph is an AMFI-registered Mutual Fund Distributor (ARN 363352). Mutual fund distribution services are different from investment advisory services. A distributor may receive commissions from Asset Management Companies for investments made through the distributor. Mutual fund investments are subject to market risks. Read all scheme-related documents carefully before investing. Past performance does not guarantee future returns.</p>
+      </div>
+    </div>
+  </aside>
+
+  <footer id="questions">
+    <div class="wrap">
+      <div class="newsletter-row">
+        <div class="newsletter-left">
+          <div class="mail-badge">✉️</div>
+          <p>Get practical notes on mutual funds, investor behaviour and clearer money decisions.</p>
+        </div>
+        <div>
+          <form class="newsletter-form" onsubmit="event.preventDefault();this.querySelector('input').value='';alert('Thanks for subscribing!');">
+            <input type="email" placeholder="Enter your email" aria-label="Email address" required>
+            <button type="submit" class="btn btn-primary" style="padding:12px 20px">Subscribe</button>
+          </form>
+          <p class="no-spam" style="margin-top:8px">No spam. Unsubscribe anytime.</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Thejus Joseph. All rights reserved.</span>
+        <div class="footer-links"><a href="index.html">Home</a><a href="disclosures.html">Disclosures</a><a href="privacy-policy.html">Privacy</a><a href="book.html">Contact</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle=document.getElementById('menuToggle');
+    const navLinks=document.getElementById('navLinks');
+    menuToggle.addEventListener('click',()=>{
+      const isOpen=navLinks.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded',String(isOpen));
+      menuToggle.textContent=isOpen?'×':'☰';
+    });
+
+    const recommendations={
+      new:{title:'Build your financial foundation first.',text:'Do not begin with fund rankings. Start by understanding your monthly surplus, emergency requirements and the purpose of your first investment.',steps:['Calculate a realistic monthly investible surplus.','Create or strengthen your emergency fund.','Choose one simple goal for your first SIP.'],label:'See the Beginner Guides →',link:'#beginner-guides'},
+      sip:{title:'Review the purpose—not just the performance.',text:'A SIP can continue mechanically even when the original reason is unclear. Connect each SIP with a goal, timeline and acceptable level of volatility.',steps:['List every SIP, amount and current value.','Write the goal and time horizon beside each one.','Identify overlaps or funds you cannot explain simply.'],label:'Book a Portfolio Conversation →',link:'book.html'},
+      goals:{title:'Give every investment a job.',text:'A portfolio without goals becomes difficult to evaluate. Define what the money is meant to achieve before deciding whether an investment is suitable.',steps:['Separate short-, medium- and long-term goals.','Estimate the amount and target date for each goal.','Match risk to the time available—not to recent returns.'],label:'Start With the Goal Framework →',link:'#money-order-title'},
+      review:{title:'Talk through the situation before taking action.',text:'Sometimes the fastest route to clarity is a structured conversation. Bring your questions, existing SIP details and the decisions you are considering.',steps:['Share your current situation and immediate questions.','Understand the gaps that need attention first.','Decide the next step without pressure to invest immediately.'],label:'Book a 30-Minute Clarity Call →',link:'book.html'}
+    };
+
+    const choiceButtons=document.querySelectorAll('.choice-btn');
+    const recTitle=document.getElementById('recTitle');
+    const recText=document.getElementById('recText');
+    const recSteps=document.getElementById('recSteps');
+    const recLink=document.getElementById('recLink');
+
+    choiceButtons.forEach(button=>{
+      button.addEventListener('click',()=>{
+        choiceButtons.forEach(item=>{item.classList.remove('active');item.setAttribute('aria-pressed','false')});
+        button.classList.add('active');
+        button.setAttribute('aria-pressed','true');
+        const data=recommendations[button.dataset.path];
+        recTitle.textContent=data.title;
+        recText.textContent=data.text;
+        recSteps.innerHTML=data.steps.map(step=>`<li><span class="rec-check">✓</span><span>${step}</span></li>`).join('');
+        recLink.textContent=data.label;
+        recLink.href=data.link;
+      });
+    });
+
+    const revealEls=document.querySelectorAll('[data-reveal]');
+    if('IntersectionObserver' in window){
+      const io=new IntersectionObserver(entries=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('in');io.unobserve(entry.target)}})},{threshold:.12});
+      revealEls.forEach(el=>io.observe(el));
+    }else{revealEls.forEach(el=>el.classList.add('in'))}
+
+    document.getElementById('year').textContent=new Date().getFullYear();
+  </script>
+</body>
+</html>
