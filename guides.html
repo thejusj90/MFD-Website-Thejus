@@ -20,13 +20,31 @@
     </div>
     <div class="nav-links">
       <a href="start-here.html">Start Here</a>
-      <a href="learn.html">Learn</a>
-      <a href="guides.html" class="active">Guides</a>
+      <div class="nav-item">
+        <span class="nav-trigger">Learn <span class="caret">▾</span></span>
+        <div class="nav-dropdown">
+          <a href="learn.html"><span>All Articles<span class="dd-desc">Every post, newest first</span></span></a>
+          <div class="dd-divider"></div>
+          <a href="why-most-people-fail-at-building-wealth.html"><span>Why Most People Fail at Building Wealth<span class="dd-desc">Behaviour beats knowledge</span></span></a>
+          <a href="power-of-starting-small-sip.html"><span>The Power of Starting Small with SIPs<span class="dd-desc">Why ₹500 matters</span></span></a>
+          <a href="should-you-stop-sip-during-crashes.html"><span>Should You Stop SIPs in a Crash?<span class="dd-desc">What the data says</span></span></a>
+        </div>
+      </div>
+      <div class="nav-item active">
+        <span class="nav-trigger">Guides <span class="caret">▾</span></span>
+        <div class="nav-dropdown">
+          <a href="guides.html"><span>All Tools &amp; Guides<span class="dd-desc">Calculators &amp; resources</span></span></a>
+          <div class="dd-divider"></div>
+          <a href="guides.html#sip"><span>SIP Returns Calculator<span class="dd-desc">Project your SIP's growth</span></span></a>
+          <a href="guides.html#emergency"><span>Emergency Fund Calculator<span class="dd-desc">How much to set aside</span></span></a>
+          <a href="guides.html#goal"><span>Goal Planning Calculator<span class="dd-desc">Required monthly SIP</span></span></a>
+        </div>
+      </div>
       <a href="questions.html">Questions</a>
       <a href="about.html">About</a>
     </div>
     <div class="nav-right">
-      <button class="btn btn-dark" style="padding:10px 18px; font-size:0.85rem;">📅 Book a 30-Min Call</button>
+      <a href="book-a-call.html" class="btn btn-dark" style="padding:10px 18px; font-size:0.85rem;">📅 Book a 30-Min Call</a>
       <button class="menu-toggle" aria-label="Open menu">☰</button>
     </div>
   </nav>
@@ -159,12 +177,16 @@
       <p>Join 5,000+ readers getting weekly insights on investing, personal finance & smarter money decisions.</p>
     </div>
     <div>
-      <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Thanks for subscribing!');">
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit" class="btn btn-primary" style="padding:12px 20px;">Subscribe</button>
+      <form class="newsletter-form" id="newsletterForm">
+        <input type="email" name="email" id="newsletterEmail" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary" id="newsletterBtn" style="padding:12px 20px;">Subscribe</button>
       </form>
-      <p class="no-spam" style="margin-top:8px;">No spam. Unsubscribe anytime.</p>
+      <p class="no-spam" style="margin-top:8px;" id="newsletterStatus">No spam. Unsubscribe anytime.</p>
     </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Thejus Joseph. All rights reserved.</span>
+    <a href="https://linkedin.com/in/thejusjoseph" target="_blank" rel="noopener">🔗 Connect on LinkedIn</a>
   </div>
 </footer>
 
@@ -255,6 +277,63 @@
   }
   [goalAmount, goalYears, goalReturn, goalInflation].forEach(el => el.addEventListener('input', calcGoal));
   calcGoal();
+
+  // ---- Newsletter subscribe via FormSubmit.co (AJAX) ----
+  const newsletterForm = document.getElementById('newsletterForm');
+  if (newsletterForm) {
+    const newsletterBtn = document.getElementById('newsletterBtn');
+    const newsletterStatus = document.getElementById('newsletterStatus');
+    const newsletterDefaultText = newsletterStatus.textContent;
+    newsletterForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      newsletterBtn.disabled = true;
+      const originalBtnText = newsletterBtn.textContent;
+      newsletterBtn.textContent = 'Sending…';
+      try {
+        const res = await fetch('https://formsubmit.co/ajax/thejusj90@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            email: newsletterForm.email.value,
+            _subject: 'New newsletter subscriber — thejusjoseph.in'
+          })
+        });
+        if (res.ok) {
+          newsletterStatus.textContent = '✓ Subscribed! Thanks for joining.';
+          newsletterStatus.style.color = '#1c6b3f';
+          newsletterForm.reset();
+        } else {
+          newsletterStatus.textContent = 'Something went wrong — please try again.';
+          newsletterStatus.style.color = '#a1401b';
+        }
+      } catch (err) {
+        newsletterStatus.textContent = 'Something went wrong — please try again.';
+        newsletterStatus.style.color = '#a1401b';
+      } finally {
+        newsletterBtn.disabled = false;
+        newsletterBtn.textContent = originalBtnText;
+        setTimeout(() => {
+          newsletterStatus.textContent = newsletterDefaultText;
+          newsletterStatus.style.color = '';
+        }, 6000);
+      }
+    });
+  }
+
+  // ---- Nav dropdown tap support (mobile) ----
+  document.querySelectorAll('.nav-item').forEach(item => {
+    const trigger = item.querySelector('.nav-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const wasOpen = item.classList.contains('dd-open');
+      document.querySelectorAll('.nav-item.dd-open').forEach(el => el.classList.remove('dd-open'));
+      if (!wasOpen) item.classList.add('dd-open');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.nav-item.dd-open').forEach(el => el.classList.remove('dd-open'));
+  });
 </script>
 
 </body>
