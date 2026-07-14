@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guides &amp; Tools | Thejus Joseph</title>
+<meta name="description" content="Free calculators for your SIP returns, emergency fund target, and goal planning — plus downloadable checklists and worksheets.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo-block">
+      <a href="index.html"><div class="brand">THEJUS JOSEPH</div></a>
+      <div class="tagline">Financial clarity. Better decisions.</div>
+    </div>
+    <div class="nav-links">
+      <a href="start-here.html">Start Here</a>
+      <a href="learn.html">Learn</a>
+      <a href="guides.html" class="active">Guides</a>
+      <a href="questions.html">Questions</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-dark" style="padding:10px 18px; font-size:0.85rem;">📅 Book a 30-Min Call</button>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Guides</span></div>
+    <h1>Tools that do the <span style="color:var(--violet);">math for you.</span></h1>
+    <p class="sub">Three calculators to answer the questions people ask most: what will my SIP become, how big should my emergency fund be, and how much do I need to invest for a goal.</p>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div id="sip" class="tool-card" data-reveal style="margin-bottom:28px;">
+      <h3>🧮 SIP Returns Calculator</h3>
+      <p class="desc">See how a monthly SIP could grow over time with compounding.</p>
+      <div class="tool-grid">
+        <div>
+          <div class="field">
+            <label>Monthly investment <span class="val" id="sipAmountVal">₹5,000</span></label>
+            <input type="range" id="sipAmount" min="500" max="100000" step="500" value="5000">
+          </div>
+          <div class="field">
+            <label>Expected annual return <span class="val" id="sipReturnVal">12%</span></label>
+            <input type="range" id="sipReturn" min="1" max="30" step="0.5" value="12">
+          </div>
+          <div class="field">
+            <label>Time period <span class="val" id="sipYearsVal">10 years</span></label>
+            <input type="range" id="sipYears" min="1" max="40" step="1" value="10">
+          </div>
+        </div>
+        <div class="result-panel">
+          <div class="headline">Estimated value</div>
+          <div class="big" id="sipFV">₹0</div>
+          <div class="row"><span class="label">Total invested</span><span class="value" id="sipInvested">₹0</span></div>
+          <div class="row"><span class="label">Estimated returns</span><span class="value" id="sipReturns">₹0</span></div>
+        </div>
+      </div>
+      <p class="tool-note">Assumes returns compound monthly at a constant rate. Actual mutual fund returns vary and are never guaranteed — this is an illustration, not a projection.</p>
+    </div>
+
+    <div id="emergency" class="tool-card" data-reveal style="margin-bottom:28px;">
+      <h3>🧯 Emergency Fund Calculator</h3>
+      <p class="desc">Work out how much to set aside before you invest a single rupee elsewhere.</p>
+      <div class="tool-grid">
+        <div>
+          <div class="field">
+            <label>Essential monthly expenses <span class="val" id="efExpenseVal">₹40,000</span></label>
+            <input type="range" id="efExpense" min="5000" max="300000" step="1000" value="40000">
+          </div>
+          <div class="field">
+            <label>Months of cover <span class="val" id="efMonthsVal">6 months</span></label>
+            <input type="range" id="efMonths" min="3" max="12" step="1" value="6">
+          </div>
+        </div>
+        <div class="result-panel">
+          <div class="headline">Target emergency fund</div>
+          <div class="big" id="efTarget">₹0</div>
+          <div class="row"><span class="label">Monthly expenses covered</span><span class="value" id="efMonthsEcho">6</span></div>
+        </div>
+      </div>
+      <p class="tool-note">Aim for 3–6 months if you're salaried with stable income, and 6–12 months if your income is variable, or you're the sole earner in your household.</p>
+    </div>
+
+    <div id="goal" class="tool-card" data-reveal>
+      <h3>📝 Goal Planning Calculator</h3>
+      <p class="desc">Find out how much you'd need to invest monthly to reach a future goal.</p>
+      <div class="tool-grid">
+        <div>
+          <div class="field">
+            <label>Goal amount (today's value) <span class="val" id="goalAmountVal">₹20,00,000</span></label>
+            <input type="range" id="goalAmount" min="100000" max="20000000" step="50000" value="2000000">
+          </div>
+          <div class="field">
+            <label>Years to goal <span class="val" id="goalYearsVal">10 years</span></label>
+            <input type="range" id="goalYears" min="1" max="35" step="1" value="10">
+          </div>
+          <div class="field">
+            <label>Expected annual return <span class="val" id="goalReturnVal">12%</span></label>
+            <input type="range" id="goalReturn" min="1" max="30" step="0.5" value="12">
+          </div>
+          <div class="field">
+            <label>Expected inflation <span class="val" id="goalInflationVal">6%</span></label>
+            <input type="range" id="goalInflation" min="0" max="12" step="0.5" value="6">
+          </div>
+        </div>
+        <div class="result-panel">
+          <div class="headline">Required monthly SIP</div>
+          <div class="big" id="goalSIP">₹0</div>
+          <div class="row"><span class="label">Goal value at future date</span><span class="value" id="goalFV">₹0</span></div>
+        </div>
+      </div>
+      <p class="tool-note">Inflation-adjusts your goal to future rupees, then works out the monthly SIP needed at your expected return to get there.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap two-col">
+    <div class="panel">
+      <h3>Popular resources</h3>
+      <p class="desc">Free downloads to keep you on track.</p>
+      <ul class="res-list">
+        <li><span class="dot">📋</span> Financial Health Checklist</li>
+        <li><span class="dot">🧮</span> SIP Returns Calculator</li>
+        <li><span class="dot">🧯</span> Emergency Fund Calculator</li>
+        <li><span class="dot">📝</span> Goal Planning Worksheet</li>
+      </ul>
+      <a href="#sip" class="panel-cta">Jump to calculators ↑</a>
+    </div>
+    <div class="panel">
+      <h3>New here?</h3>
+      <p class="desc">Start with these 5 must-read guides before you dive into the tools.</p>
+      <ul class="num-list">
+        <li><span class="num">1</span> Money Basics – Everything you should know</li>
+        <li><span class="num">2</span> How Mutual Funds Actually Work</li>
+        <li><span class="num">3</span> Your First SIP: A Step-by-Step Guide</li>
+      </ul>
+      <a href="start-here.html" class="panel-cta">Go to Start Here →</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap newsletter-row">
+    <div class="newsletter-left">
+      <div class="mail-badge">✉️</div>
+      <p>Join 5,000+ readers getting weekly insights on investing, personal finance & smarter money decisions.</p>
+    </div>
+    <div>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Thanks for subscribing!');">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary" style="padding:12px 20px;">Subscribe</button>
+      </form>
+      <p class="no-spam" style="margin-top:8px;">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el=>io.observe(el));
+
+  document.querySelector('.menu-toggle').addEventListener('click', ()=>{
+    const links = document.querySelector('.nav-links');
+    const isOpen = links.style.display === 'flex';
+    links.style.display = isOpen ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '64px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = '#fff';
+    links.style.padding = '20px 32px';
+    links.style.borderBottom = '1px solid var(--line)';
+  });
+
+  function inr(n){
+    n = Math.round(n);
+    return '₹' + n.toLocaleString('en-IN');
+  }
+
+  // ---- SIP Calculator ----
+  const sipAmount = document.getElementById('sipAmount');
+  const sipReturn = document.getElementById('sipReturn');
+  const sipYears = document.getElementById('sipYears');
+  function calcSIP(){
+    const P = parseFloat(sipAmount.value);
+    const annualRate = parseFloat(sipReturn.value);
+    const years = parseFloat(sipYears.value);
+    const n = years * 12;
+    const i = annualRate / 100 / 12;
+    const fv = i === 0 ? P * n : P * ((Math.pow(1+i, n) - 1) / i) * (1 + i);
+    const invested = P * n;
+    const returns = fv - invested;
+    document.getElementById('sipAmountVal').textContent = inr(P);
+    document.getElementById('sipReturnVal').textContent = annualRate + '%';
+    document.getElementById('sipYearsVal').textContent = years + (years === 1 ? ' year' : ' years');
+    document.getElementById('sipFV').textContent = inr(fv);
+    document.getElementById('sipInvested').textContent = inr(invested);
+    document.getElementById('sipReturns').textContent = inr(returns);
+  }
+  [sipAmount, sipReturn, sipYears].forEach(el => el.addEventListener('input', calcSIP));
+  calcSIP();
+
+  // ---- Emergency Fund Calculator ----
+  const efExpense = document.getElementById('efExpense');
+  const efMonths = document.getElementById('efMonths');
+  function calcEF(){
+    const exp = parseFloat(efExpense.value);
+    const months = parseFloat(efMonths.value);
+    document.getElementById('efExpenseVal').textContent = inr(exp);
+    document.getElementById('efMonthsVal').textContent = months + ' months';
+    document.getElementById('efMonthsEcho').textContent = months;
+    document.getElementById('efTarget').textContent = inr(exp * months);
+  }
+  [efExpense, efMonths].forEach(el => el.addEventListener('input', calcEF));
+  calcEF();
+
+  // ---- Goal Planner ----
+  const goalAmount = document.getElementById('goalAmount');
+  const goalYears = document.getElementById('goalYears');
+  const goalReturn = document.getElementById('goalReturn');
+  const goalInflation = document.getElementById('goalInflation');
+  function calcGoal(){
+    const today = parseFloat(goalAmount.value);
+    const years = parseFloat(goalYears.value);
+    const annualRate = parseFloat(goalReturn.value);
+    const inflation = parseFloat(goalInflation.value);
+    const n = years * 12;
+    const i = annualRate / 100 / 12;
+    const futureGoal = today * Math.pow(1 + inflation/100, years);
+    const factor = i === 0 ? n : ((Math.pow(1+i, n) - 1) / i) * (1 + i);
+    const requiredSIP = futureGoal / factor;
+    document.getElementById('goalAmountVal').textContent = inr(today);
+    document.getElementById('goalYearsVal').textContent = years + (years === 1 ? ' year' : ' years');
+    document.getElementById('goalReturnVal').textContent = annualRate + '%';
+    document.getElementById('goalInflationVal').textContent = inflation + '%';
+    document.getElementById('goalSIP').textContent = inr(requiredSIP) + '/mo';
+    document.getElementById('goalFV').textContent = inr(futureGoal);
+  }
+  [goalAmount, goalYears, goalReturn, goalInflation].forEach(el => el.addEventListener('input', calcGoal));
+  calcGoal();
+</script>
+
+</body>
+</html>

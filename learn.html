@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Learn | Thejus Joseph</title>
+<meta name="description" content="Ideas on investing, saving and money behaviour — written for people who want to make better decisions, not chase returns.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo-block">
+      <a href="index.html"><div class="brand">THEJUS JOSEPH</div></a>
+      <div class="tagline">Financial clarity. Better decisions.</div>
+    </div>
+    <div class="nav-links">
+      <a href="start-here.html">Start Here</a>
+      <a href="learn.html" class="active">Learn</a>
+      <a href="guides.html">Guides</a>
+      <a href="questions.html">Questions</a>
+      <a href="about.html">About</a>
+    </div>
+    <div class="nav-right">
+      <button class="btn btn-dark" style="padding:10px 18px; font-size:0.85rem;">📅 Book a 30-Min Call</button>
+      <button class="menu-toggle" aria-label="Open menu">☰</button>
+    </div>
+  </nav>
+</header>
+
+<section class="page-header">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> <span>Learn</span></div>
+    <h1>Ideas worth <span style="color:var(--violet);">sitting with.</span></h1>
+    <p class="sub">Short, opinionated reads on investing behaviour, SIPs, and the decisions that actually move your net worth. No stock tips, ever.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Latest insights</h2>
+    </div>
+    <div class="insights-grid">
+      <article class="insight-card" data-reveal>
+        <div class="insight-thumb" style="background:linear-gradient(135deg,#1c1c1c,#3a3a3a);">Discipline<br>&gt; Motivation</div>
+        <div class="insight-body">
+          <h3>Why most people fail at building wealth (It's not what you think)</h3>
+          <div class="insight-meta"><span>May 22, 2024 · 6 min read</span><span>🔖</span></div>
+        </div>
+      </article>
+      <article class="insight-card" data-reveal>
+        <div class="insight-thumb" style="background:linear-gradient(135deg,#2f6b45,#7fbf8f); color:#0e2417;">Small steps.<br>Big compounding.</div>
+        <div class="insight-body">
+          <h3>The power of starting small with SIPs</h3>
+          <div class="insight-meta"><span>May 19, 2024 · 5 min read</span><span>🔖</span></div>
+        </div>
+      </article>
+      <article class="insight-card" data-reveal>
+        <div class="insight-thumb" style="background:linear-gradient(135deg,#6fa3d8,#a9c9ec);">Markets go up.<br>Markets go down.<br>You stay invested.</div>
+        <div class="insight-body">
+          <h3>Should you stop SIPs during market crashes?</h3>
+          <div class="insight-meta"><span>May 16, 2024 · 7 min read</span><span>🔖</span></div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Browse by topic</h2>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card" data-reveal>
+        <div class="ic-badge" style="background:var(--card-violet); color:var(--icon-violet);">🧠</div>
+        <h3>Money Behaviour</h3>
+        <p>Why we make the money decisions we do, and how to build better defaults.</p>
+        <span class="link-cta">Browse articles →</span>
+      </div>
+      <div class="guide-card" data-reveal>
+        <div class="ic-badge" style="background:var(--card-green); color:var(--icon-green);">📊</div>
+        <h3>Investing</h3>
+        <p>SIPs, asset allocation, and staying invested through noisy markets.</p>
+        <span class="link-cta">Browse articles →</span>
+      </div>
+      <div class="guide-card" data-reveal>
+        <div class="ic-badge" style="background:var(--card-peach); color:var(--icon-peach);">🎯</div>
+        <h3>Goal Planning</h3>
+        <p>Turning "someday" goals like a house or retirement into a funded plan.</p>
+        <span class="link-cta">Browse articles →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" style="padding-top:0;">
+  <div class="wrap">
+    <div class="panel" style="background:var(--card-cream); align-items:center; text-align:center;" data-reveal>
+      <h3>More articles are on the way.</h3>
+      <p class="desc">New reads land every week. Subscribe below and get them straight in your inbox — no need to check back.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap newsletter-row">
+    <div class="newsletter-left">
+      <div class="mail-badge">✉️</div>
+      <p>Join 5,000+ readers getting weekly insights on investing, personal finance & smarter money decisions.</p>
+    </div>
+    <div>
+      <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('input').value=''; alert('Thanks for subscribing!');">
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit" class="btn btn-primary" style="padding:12px 20px;">Subscribe</button>
+      </form>
+      <p class="no-spam" style="margin-top:8px;">No spam. Unsubscribe anytime.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const revealEls = document.querySelectorAll('[data-reveal]');
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.15 });
+  revealEls.forEach(el=>io.observe(el));
+
+  document.querySelector('.menu-toggle').addEventListener('click', ()=>{
+    const links = document.querySelector('.nav-links');
+    const isOpen = links.style.display === 'flex';
+    links.style.display = isOpen ? 'none' : 'flex';
+    links.style.flexDirection = 'column';
+    links.style.position = 'absolute';
+    links.style.top = '64px';
+    links.style.left = '0';
+    links.style.right = '0';
+    links.style.background = '#fff';
+    links.style.padding = '20px 32px';
+    links.style.borderBottom = '1px solid var(--line)';
+  });
+</script>
+
+</body>
+</html>
